@@ -1,4 +1,4 @@
-/* General Styles */
+
 p {
     margin: 0px;
 }
@@ -26,11 +26,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
+    flex-wrap: wrap; 
     padding: 10px 20px;
-    width: 90%; /* Use percentage for scalability */
+    width: 90%; 
     max-width: 500px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto; 
     box-shadow: yellow 1px 1px 20px;
 }
 .button {
@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 10px; /* Add spacing between buttons */
+    margin: 10px; 
 }
 .button img {
     width: 120px;
@@ -51,10 +51,10 @@ body {
     object-fit: cover;
 }
 .container-stats {
-    width: 90%; /* Use percentage for flexibility */
+    width: 90%; 
     max-width: 500px;
     border: 10px yellow solid;
-    margin: 20px auto; /* Center horizontally */
+    margin: 20px auto; 
     padding: 10px 20px;
     box-shadow: yellow 1px 1px 20px;
 }
@@ -68,7 +68,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap; 
 }
 .scorecard-button {
     border-radius: 4px;
@@ -96,7 +96,7 @@ body {
     margin: 0px;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
     .container-buttons,
     .container-stats {
