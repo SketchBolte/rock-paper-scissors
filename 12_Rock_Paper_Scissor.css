@@ -1,34 +1,37 @@
+/* General Styles */
 p {
-    margin : 0px;
+    margin: 0px;
 }
 body {
     background-color: rgb(126, 0, 180);
     color: white;
-    font-family: arial;
+    font-family: Arial, sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .head {
     font-size: 40px;
     margin: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
-    justify-self: center;
+    text-align: center;
     margin-bottom: 10px;
 }
 .container-buttons {
     border-width: 10px;
     border-color: rgb(248, 248, 2);
-    height: 170px;
     border-style: solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1fr 1fr 1fr;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
     padding: 10px 20px;
-    width: 500px;
-    justify-self: center;
+    width: 90%; /* Use percentage for scalability */
+    max-width: 500px;
+    margin: 0 auto; /* Center horizontally */
     box-shadow: yellow 1px 1px 20px;
-    
 }
 .button {
     height: 150px;
@@ -36,9 +39,11 @@ body {
     border-radius: 300px;
     box-shadow: rgb(255, 0, 128) 1px 1px 20px;
     border: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 10px; /* Add spacing between buttons */
 }
 .button img {
     width: 120px;
@@ -46,12 +51,11 @@ body {
     object-fit: cover;
 }
 .container-stats {
-    width: 500px;
+    width: 90%; /* Use percentage for flexibility */
+    max-width: 500px;
     border: 10px yellow solid;
-    justify-self: center;
-    margin-top: 20px;
+    margin: 20px auto; /* Center horizontally */
     padding: 10px 20px;
-    justify-content: center;
     box-shadow: yellow 1px 1px 20px;
 }
 .stats {
@@ -60,12 +64,11 @@ body {
     padding: 20px;
     border: 2px rgb(255, 225, 0) solid;
     box-shadow: rgb(255, 247, 241) 1px 1px 5px;
-    height: 20px;
     display: flex;
     align-items: center;
-    vertical-align: middle;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 .scorecard-button {
     border-radius: 4px;
@@ -84,14 +87,61 @@ body {
     height: 50px;
     width: 50px;
     border: solid 2px rgb(242, 255, 0);
-    vertical-align: middle;
     background-color: aliceblue;
     margin-left: 10px;
     border-radius: 25px;
 }
 .update-score {
-    padding : 0px;
+    padding: 0px;
     margin: 0px;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container-buttons,
+    .container-stats {
+        width: 95%;
+        padding: 10px;
+    }
 
+    .button {
+        height: 100px;
+        width: 100px;
+    }
+
+    .button img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stats {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .head {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        height: 80px;
+        width: 80px;
+    }
+
+    .button img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .stats {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .head {
+        font-size: 24px;
+    }
+}
